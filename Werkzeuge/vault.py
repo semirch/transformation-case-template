@@ -13,6 +13,17 @@ NIE = {"Archiv", ".obsidian", ".trash", ".git", ".claude", ".githooks", "Rohmate
 
 HERKUNFT = ["öffentlich", "intern belegt", "angenommen", "generiert", "ungeprüft"]
 
+# Sichtbarer Hinweis in jeder Notiz eines Falls, der nicht auf echten internen Daten beruht.
+MARKE_DATENLAGE = "<!-- datenlage -->"
+_HINWEIS = {
+    "fiktiv": ("**Fiktiver Fall.** {org} ist eine erfundene Organisation. Alle Angaben in diesem "
+               "Repo sind konstruiert und beschreiben kein reales Unternehmen und keine reale Person."),
+    "gemischt": ("**Konstruierter Fall zu einem realen Unternehmen.** Dieses Repo enthält ausschließlich "
+                 "öffentlich zugängliche Angaben über {org}, eigene Annahmen und erfundene Ergänzungen. "
+                 "Es enthält keine internen Daten, nichts stammt aus dem Unternehmen, und es besteht "
+                 "keine Verbindung zu {org}. Was nicht als `öffentlich` gekennzeichnet ist, ist nicht belegt."),
+}
+
 
 def _sichtbar(p):
     return not (NIE & set(p.relative_to(VAULT).parts))
@@ -50,6 +61,19 @@ def fallstatus():
 def sperre_offen():
     """Wahr, wenn ein aktiver Fall seine Datenverarbeitung noch nicht geklärt hat."""
     return fallstatus() == "aktiv" and frontmatter(SPERRE).get("status") != "geklärt"
+
+
+def datenlage():
+    return frontmatter(FALL).get("datenlage", "echt") or "echt"
+
+
+def hinweis():
+    """Die Hinweiszeile für diesen Fall, oder '' bei echter Datenlage und in der leeren Vorlage."""
+    art = datenlage()
+    if fallstatus() == "vorlage" or art not in _HINWEIS:
+        return ""
+    org = frontmatter(FALL).get("organisation", "Die Organisation")
+    return f"> {MARKE_DATENLAGE} " + _HINWEIS[art].format(org=org)
 
 
 def modul_status(name):

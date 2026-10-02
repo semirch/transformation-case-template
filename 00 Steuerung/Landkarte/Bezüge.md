@@ -11,7 +11,7 @@ Verbindungen zwischen Notizen sind Prüfbeziehungen, keine Nachweise einer Ursac
 | [Datenverarbeitung: was mit den Daten dieses Falls geschehen darf](../datenverarbeitung.md) | 3 | 1 |
 | [Entscheidungen](../entscheidungen.md) | 3 | 0 |
 | [Ereignisse](../ereignisse.md) | 2 | 0 |
-| [Der Fall: ‹Organisation›](../fall.md) | 10 | 0 |
+| [Der Fall: ‹Organisation›](../fall.md) | 10 | 1 |
 | [Rückmeldung an die Methoden](../methodenrueckmeldung.md) | 4 | 1 |
 | [Risiken](../risiken.md) | 1 | 1 |
 | [Auszüge](../../01%20Erhebung/Ausz%C3%BCge/README.md) | 0 | 0 |
@@ -47,7 +47,7 @@ Verbindungen zwischen Notizen sind Prüfbeziehungen, keine Nachweise einer Ursac
 | [C11 · Entlastung und Auszahlung](../../11%20Gegenpr%C3%BCfung/Beziehungen/C11%20Entlastung%20und%20Auszahlung.md) | 1 | 2 |
 | [C12 · Auftrag und unabhängige Bewertung](../../11%20Gegenpr%C3%BCfung/Beziehungen/C12%20Auftrag%20und%20unabha%CC%88ngige%20Bewertung.md) | 0 | 2 |
 | [Challenge-Register: Zusammenhänge gegenprüfen](../../11%20Gegenpr%C3%BCfung/Challenge-Register.md) | 2 | 9 |
-| [Vertrag für KI-Assistenten und das Methoden-Repo](../../AGENTS.md) | 9 | 4 |
+| [Vertrag für KI-Assistenten und das Methoden-Repo](../../AGENTS.md) | 10 | 4 |
 | [Arbeitsregeln für diesen Fall](../../CLAUDE.md) | 0 | 0 |
 | [Fall-Vorlage für KI-Transformationsvorhaben](../../README.md) | 1 | 3 |
 | [Start](../../Start.md) | 1 | 12 |

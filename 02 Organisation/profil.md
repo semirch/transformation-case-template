@@ -1,7 +1,6 @@
 ---
 typ: organisation
 organisation: "‹Organisation›"
-fallart_real: true           # false bei einem konstruierten Übungsfall
 branche:
 rechtsform:
 eigentuemer:

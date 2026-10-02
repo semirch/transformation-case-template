@@ -12,7 +12,7 @@ Aufruf:  python3 Werkzeuge/restliste.py
 import os, pathlib, re, datetime, collections, urllib.parse
 
 HIER = pathlib.Path(__file__).parent
-from vault import VAULT, LANDKARTE, fall_md
+from vault import VAULT, LANDKARTE, fall_md, hinweis
 
 ZIEL = LANDKARTE / "restliste.md"
 
@@ -89,7 +89,7 @@ def sammeln():
 
 def schreiben(treffer):
     gesamt = sum(len(v) for v in treffer.values())
-    z = [f"# Restliste: jeder offene Punkt an einem Ort\n",
+    z = [f"# Restliste: jeder offene Punkt an einem Ort\n", *([hinweis() + "\n"] if hinweis() else []),
          f"**Stand:** {datetime.date.today().strftime('%d.%m.%Y')}",
          "**Erzeugt von:** `Werkzeuge/restliste.py`. **Nicht von Hand pflegen:** Wer einen",
          "Punkt schließt, schließt ihn in der Datei, in der er steht, und erzeugt",

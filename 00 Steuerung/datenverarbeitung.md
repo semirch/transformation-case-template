@@ -11,6 +11,8 @@ bestaetigt_durch:
 
 Diese Notiz wird geklärt, bevor Falldaten in das Repo oder in ein Chatfenster gelangen. Die Fragen lassen sich ohne Falldaten beantworten: Gefragt ist die Regel, nicht das Dokument. Eine Antwort „weiß ich nicht" ist zulässig und führt zu einer Zeile unter Offen, nicht zu einer Annahme.
 
+Bei einem Fall mit Datenlage `gemischt` oder `fiktiv` setzt das Startskript diese Notiz selbst auf `geklärt`: Es gibt dort keine internen Daten. Kommt später echtes Material dazu, wird sie neu geklärt.
+
 ## 1. Grundlage
 
 | Frage | Antwort |

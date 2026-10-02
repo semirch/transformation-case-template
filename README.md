@@ -31,6 +31,16 @@ Die Methoden, mit denen ein Fall gefüllt wird, liegen getrennt in einem Methode
 
 Der **Kern** ist in jedem Fall gleich und methodenunabhängig. Die **Module** sind leer, bis eine Methode sie füllt. Welche ein Fall braucht, wird in `00 Steuerung/fall.md` entschieden.
 
+## Echte, gemischte und fiktive Fälle
+
+Beim Anlegen wird die Datenlage festgelegt:
+
+- **echt:** reale Organisation mit internen Dokumenten und Gesprächen. Das Repo ist privat, die Sperre für die Datenverarbeitung ist aktiv.
+- **gemischt:** reale, benannte Organisation, aber nur öffentliche Angaben, Annahmen und erfundene Ergänzungen.
+- **fiktiv:** erfundene Organisation, alles konstruiert.
+
+Bei gemischten und fiktiven Fällen trägt **jede Notiz** unter der Überschrift einen Hinweis, dass die Angaben konstruiert sind und nicht aus dem Unternehmen stammen. So kann niemand sie für echte oder entwendete Daten halten, auch wer nur eine einzelne Datei sieht. Ein Git-Hook verhindert Commits ohne diesen Hinweis und ohne Kennzeichen `intern belegt`.
+
 ## Vier Grundsätze
 
 1. **Erst klären, dann sammeln.** Solange nicht feststeht, was mit den Daten geschehen darf, lassen zwei Hooks keine Änderung außer an `00 Steuerung/datenverarbeitung.md` zu.

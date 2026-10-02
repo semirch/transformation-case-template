@@ -3,6 +3,7 @@ typ: fall
 fallstatus: vorlage          # vorlage, aktiv, abgeschlossen
 organisation: "‹Organisation›"
 fallart:                     # anstellung, beratung, übung
+datenlage: echt              # echt, gemischt, fiktiv
 beginn:
 methoden_repo:
 methoden_stand:
@@ -31,6 +32,18 @@ Diese Notiz sagt, worum es geht, wie weit der Auftrag reicht und welche Teile de
 | Bis wann? | | |
 | Wer nimmt das Ergebnis ab? | | |
 | Was ist ausdrücklich nicht Teil des Auftrags? | | |
+
+## Datenlage
+
+Das Feld `datenlage` im Frontmatter sagt, woraus dieser Fall besteht. Es wird beim Anlegen gesetzt und danach nicht still geändert.
+
+| Wert | Bedeutung |
+|---|---|
+| `echt` | Reale Organisation, mit internen Dokumenten und Gesprächen |
+| `gemischt` | Reale, benannte Organisation, aber nur öffentliche Angaben, Annahmen und erfundene Ergänzungen. Keine internen Daten |
+| `fiktiv` | Erfundene Organisation. Alles ist konstruiert |
+
+Bei `gemischt` und `fiktiv` trägt jede Notiz einen Hinweis unter der Überschrift, siehe [AGENTS.md](../AGENTS.md), Abschnitt 11.
 
 ## Umfang
 

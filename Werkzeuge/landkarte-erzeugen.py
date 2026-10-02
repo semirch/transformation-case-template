@@ -13,7 +13,7 @@ Nicht von Hand pflegen: alles hier wird bei jedem Lauf neu gezählt. Ausnahme is
   python3 Werkzeuge/landkarte-erzeugen.py
 """
 import collections, datetime, os, re, sys, unicodedata, urllib.parse
-from vault import VAULT, LANDKARTE, HERKUNFT, alle_md
+from vault import VAULT, LANDKARTE, HERKUNFT, alle_md, hinweis
 
 MARKE = "<!-- erzeugt von landkarte-erzeugen.py -->"
 HEUTE = datetime.date.today().strftime("%d.%m.%Y")
@@ -110,7 +110,7 @@ def main():
     for art, liste in KNOTEN.items():
         for name, muster, quelle, anfang in liste:
             p = LANDKARTE / art / f"{name}.md"
-            z = [f"# {name}", "", MARKE,
+            z = [f"# {name}", "", *([hinweis(), ""] if hinweis() else []), MARKE,
                  f"**Stand:** {HEUTE} · erzeugt von `Werkzeuge/landkarte-erzeugen.py`, nicht von Hand pflegen.",
                  f"**Art:** {art[:-1] if art != 'Gremien' else 'Gremium'} · zurück zur [Organisationskarte]({rel(p, LANDKARTE / 'Organisation vernetzt.md')})",
                  ""]
@@ -149,7 +149,7 @@ def main():
     # ── Informationsbestand ───────────────────────────────────────────────
     # Gezählt werden nur Kennzeichen in Backticks. So zählt der erklärende Text nicht mit.
     p = LANDKARTE / "Informationsbestand.md"
-    z = ["# Informationsbestand", "", MARKE,
+    z = ["# Informationsbestand", "", *([hinweis(), ""] if hinweis() else []), MARKE,
          f"**Stand:** {HEUTE} · erzeugt von `Werkzeuge/landkarte-erzeugen.py`, nicht von Hand pflegen.",
          "",
          "Was gesammelt ist, je Notiz: Stand, wie oft jedes der fünf Herkunftskennzeichen vorkommt, "
@@ -196,7 +196,7 @@ def main():
         raus[d] = targets
         rein.update(targets)
     p = LANDKARTE / "Bezüge.md"
-    z = ["# Lokale Bezüge", "", MARKE,
+    z = ["# Lokale Bezüge", "", *([hinweis(), ""] if hinweis() else []), MARKE,
          f"**Stand:** {HEUTE} · automatisch erzeugt.", "",
          "Verbindungen zwischen Notizen sind Prüfbeziehungen, keine Nachweise einer Ursache.", "",
          "| Notiz | Eingehende Verweise | Ausgehende Verweise |", "|---|---|---|"]

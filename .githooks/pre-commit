@@ -1,4 +1,7 @@
 #!/bin/sh
-# Blockiert Commits, solange die Datenverarbeitung eines aktiven Falls nicht geklärt ist.
+# 1. Blockiert Commits, solange die Datenverarbeitung eines aktiven Falls nicht geklärt ist.
+# 2. Blockiert Commits, wenn in einem fiktiven oder gemischten Fall der Hinweis fehlt.
 # Einmal je Klon aktivieren: git config core.hooksPath .githooks  (erledigt neuer-fall.py)
-exec python3 "$(git rev-parse --show-toplevel)/Werkzeuge/sperre.py" --commit
+W="$(git rev-parse --show-toplevel)/Werkzeuge"
+python3 "$W/sperre.py" --commit || exit 1
+python3 "$W/kennzeichnung.py" --pruefen >/dev/null || exit 1
