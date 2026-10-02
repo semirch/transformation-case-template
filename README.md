@@ -57,3 +57,7 @@ Danach mit dem Assistenten die Datenverarbeitung klären. Die weiteren Schritte 
 - Der Werkzeug-Hook gilt für Claude Code. Für andere Assistenten bleiben die Regel in `AGENTS.md` und der Git-Hook.
 - Sie ersetzt keine Rechtsberatung.
 - Weitergegeben wird nie das Repo selbst, sondern eine geprüfte Kopie, siehe [Weitergabe.md](Weitergabe.md).
+
+## Lizenz
+
+[CC0 1.0](LICENSE): Die Vorlage ist gemeinfrei. Sie darf ohne Einschränkung und ohne Namensnennung kopiert, verändert und verwendet werden, auch gewerblich.
