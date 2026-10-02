@@ -1,0 +1,4 @@
+#!/bin/sh
+# Blockiert Commits, solange die Datenverarbeitung eines aktiven Falls nicht geklärt ist.
+# Einmal je Klon aktivieren: git config core.hooksPath .githooks  (erledigt neuer-fall.py)
+exec python3 "$(git rev-parse --show-toplevel)/Werkzeuge/sperre.py" --commit

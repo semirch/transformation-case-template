@@ -1,0 +1,100 @@
+{
+  "collapse-filter": false,
+  "search": "-path:\"Archiv\" -path:\"Werkzeuge\" -path:\"Landkarte\"",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:\"11 Gegenprüfung\"",
+      "color": {
+        "a": 1,
+        "rgb": 15238965
+      }
+    },
+    {
+      "query": "path:\"02 Organisation\"",
+      "color": {
+        "a": 1,
+        "rgb": 7702172
+      }
+    },
+    {
+      "query": "path:\"04 Diagnose\"",
+      "color": {
+        "a": 1,
+        "rgb": 12021457
+      }
+    },
+    {
+      "query": "path:\"05 Ziele und Programm\"",
+      "color": {
+        "a": 1,
+        "rgb": 4427224
+      }
+    },
+    {
+      "query": "path:\"06 Menschen und Kommunikation\"",
+      "color": {
+        "a": 1,
+        "rgb": 14048638
+      }
+    },
+    {
+      "query": "path:\"03 Vorhaben\"",
+      "color": {
+        "a": 1,
+        "rgb": 14000427
+      }
+    },
+    {
+      "query": "path:\"07 Governance und Recht\"",
+      "color": {
+        "a": 1,
+        "rgb": 9991126
+      }
+    },
+    {
+      "query": "path:\"08 Plattform und Kosten\"",
+      "color": {
+        "a": 1,
+        "rgb": 3778441
+      }
+    },
+    {
+      "query": "path:\"09 Daten\"",
+      "color": {
+        "a": 1,
+        "rgb": 4892856
+      }
+    },
+    {
+      "query": "path:\"01 Erhebung\"",
+      "color": {
+        "a": 1,
+        "rgb": 8421504
+      }
+    },
+    {
+      "query": "path:\"00 Steuerung\"",
+      "color": {
+        "a": 1,
+        "rgb": 3355443
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 0.534880473637176,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 1.3660906591466984,
+  "close": true
+}

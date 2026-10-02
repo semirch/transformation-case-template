@@ -1,0 +1,17 @@
+# Rohmaterial bleibt lokal. Nur mit Erlaubnis in 00 Steuerung/datenverarbeitung.md ändern.
+01 Erhebung/Rohmaterial/*
+!01 Erhebung/Rohmaterial/README.md
+
+# macOS
+.DS_Store
+
+# Obsidian: Fensterzustand und Papierkorb ändern sich bei jeder Sitzung
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
+
+# Python
+__pycache__/
+
+# Persönliche Einstellungen des Assistenten
+.claude/settings.local.json
